@@ -39,10 +39,14 @@ void view(Node* top) {
     }
     Node* temp = top;
     while (temp != NULL) {
-        printf("%d -> ", temp->data);
+        if (temp->next == NULL) {
+            printf("%d\n", temp->data);
+        } else {
+            printf("%d -> ", temp->data);
+        }
         temp = temp->next;
     }
-    printf("NULL\n");
+
 }
 
 int main() {
